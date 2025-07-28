@@ -1,54 +1,65 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Allow notifications for messages</title>
+  <title>Allow notifications for messages - Chrome Extension</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #fff;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      height: 100vh;
+      width: 100vw;
     }
 
     .container {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-      text-align: center;
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
     }
 
-    .extension-header {
+    .header {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      margin-bottom: 30px;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
-    .extension-info {
-      text-align: left;
+    .info {
+      flex: 1;
+      margin-left: 20px;
     }
 
-    .extension-icon {
+    .info h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .info p {
+      color: #555;
+    }
+
+    .icon {
       width: 120px;
       height: 120px;
       border-radius: 20px;
-    }
-
-    h1 {
-      font-size: 24px;
-      margin: 10px 0 5px;
     }
 
     .add-button {
       background-color: #1a73e8;
       color: white;
       border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
+      padding: 12px 24px;
+      border-radius: 6px;
       font-size: 16px;
       cursor: pointer;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      margin-top: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     .add-button:hover {
@@ -60,27 +71,40 @@
       display: flex;
       justify-content: center;
       gap: 20px;
+      flex-wrap: wrap;
     }
 
     .previews img {
-      width: 320px;
+      width: 300px;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    }
+
+    @media (max-width: 600px) {
+      .header {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .info {
+        margin-left: 0;
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
 
   <div class="container">
-    <div class="extension-header">
-      <img src="icon.png" alt="Extension Icon" class="extension-icon">
-      <div class="extension-info">
-        <h1>تفعيل الإشعارات</h1>
-        <p>أداة رسمية لعرض إشعارات سكربت Crypto Exchanger PHP.</p>
+    <div class="header">
+      <img src="icon.png" alt="Extension Icon" class="icon">
+      <div class="info">
+        <h1>Allow notifications for messages</h1>
+        <p>The official Chrome extension for receiving message alerts from the Crypto Exchanger PHP script.</p>
+        <a href="Allow-notifications.zip" download>
+          <button class="add-button">Add to Chrome</button>
+        </a>
       </div>
-      <button class="add-button" onclick="alert('سيتم توجيهك إلى ملف الإضافة لتثبيتها يدويًا.')">
-        Add to Chrome
-      </button>
     </div>
 
     <div class="previews">
