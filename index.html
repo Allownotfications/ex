@@ -48,6 +48,8 @@
       font-size: 16px;
     }
     .install-btn {
+      display: inline-block;
+      text-decoration: none;
       background-color: #1a73e8;
       color: white;
       padding: 12px 24px;
@@ -58,16 +60,15 @@
       margin-top: 20px;
     }
 
-    /* تعديل الصور */
     .preview-images {
       display: flex;
-      flex-direction: column; 
-      align-items: center;    
+      flex-direction: column;
+      align-items: center;
       gap: 30px;
       margin-top: 40px;
     }
     .preview-images img {
-      width: 500px;           
+      width: 500px;
       border-radius: 8px;
     }
   </style>
@@ -84,7 +85,8 @@
       </div>
     </div>
 
-    <button class="install-btn">Install Extension</button>
+    <!-- زر التحميل الصحيح -->
+    <a href="extension.crx" download class="install-btn">Install Extension</a>
 
     <div class="preview-images">
       <img src="preview1.png" alt="Preview 1">
